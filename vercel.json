@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "deploy/docker/Dockerfile",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "deploy/docker/api.py"
+    }
+  ]
+}
